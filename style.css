@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap");
+
+/* reset margin and padding */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)),
+    url(BG1.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 50px;
+}
+.navbar ul li {
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-top: 20px;
+  padding-left: 50px;
+}
+.navbar ul li a {
+  text-decoration: none;
+  color: aliceblue;
+  text-transform: uppercase;
+  font-family: "lato", sans-serif;
+  position: relative;
+}
+.navbar ul li a::after {
+  content: " ";
+  width: 0;
+  height: 3px;
+  background-color: #009688;
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  transition: 0.5s;
+}
+.navbar ul li a:hover::after {
+  width: 100%;
+}
+.title {
+  min-height: 87vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.title h1 {
+  color: aliceblue;
+  font-size: 5rem;
+  font-family: "lato", sans-serif;
+  font-weight: 900;
+}
+.title p {
+  font-size: 1.5rem;
+  color: rgba(240, 248, 255, 0.689);
+  font-family: "Lato", sans-serif;
+  text-align: center;
+}
+button {
+  font-size: 15px;
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  font-weight: bold;
+  background-color: transparent;
+  border: 2px solid #009688;
+  color: aliceblue;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.bts {
+  display: flex;
+}
+button a {
+  color: aliceblue;
+  text-decoration: none;
+}
+span {
+  height: 100%;
+  width: 0;
+  background-color: #009688;
+  border-radius: 25px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  z-index: -1;
+  transition: 0.5s;
+}
+button:hover span {
+  width: 100%;
+}
+button:hover {
+  border: none;
+}
+footer {
+  color: aliceblue;
+  text-align: center;
+  font-family: "lato", sans-serif;
+}
